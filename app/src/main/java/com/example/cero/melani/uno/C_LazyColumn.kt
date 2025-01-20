@@ -26,7 +26,7 @@ class C_LazyColumn : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            app3()
+            App3()
         }
     }
 }
@@ -36,7 +36,7 @@ class C_LazyColumn : ComponentActivity() {
 //En LazyColumn hay que sustituir Column y añadir item para los componentes
 @Preview
 @Composable
-fun app3() {
+fun App3() {
     LazyColumn(
         modifier = Modifier.fillMaxSize().background(Color.Magenta)
     ) {

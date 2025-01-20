@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -24,12 +25,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.cero.R
 
-class B_Filas : ComponentActivity() {
+class D_LazyRow : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            App2()
+            App4()
         }
     }
 }
@@ -39,9 +40,9 @@ class B_Filas : ComponentActivity() {
 //En LazyColumn hay que sustituir Column y añadir item para los componentes
 @Preview
 @Composable
-fun App2() {
+fun App4() {
     LazyColumn(
-        modifier = Modifier.fillMaxSize().background(Color.Magenta)
+        modifier = Modifier.fillMaxSize().background(Color.Magenta).padding(16.dp)
     ) {
         item {
             Image(
@@ -57,20 +58,22 @@ fun App2() {
             )
             Text(text = "2DAM")
             Text(text = "HOLA")
-            Row (
+            LazyRow (
                 horizontalArrangement = Arrangement.SpaceBetween,
                 modifier = Modifier.fillMaxWidth().padding(16.dp)
             ){
-                Text(text = "JAVA", color = Color.White)
-                Text(text = "KOTLIN", color = Color.White)
-                Text(text = "EJEMPLO", color = Color.White)
-                Text(text = "EJEMPLO", color = Color.White)
-                Text(text = "EJEMPLO", color = Color.White)
-                Text(text = "EJEMPLO", color = Color.White)
-                Text(text = "EJEMPLO", color = Color.White)
-                Text(text = "EJEMPLO", color = Color.White)
-                Text(text = "EJEMPLO", color = Color.White)
-                Text(text = "EJEMPLO", color = Color.White)
+                item {
+                    Text(text = "JAVA", color = Color.White)
+                    Text(text = "KOTLIN", color = Color.White)
+                    Text(text = "EJEMPLO", color = Color.White)
+                    Text(text = "EJEMPLO", color = Color.White)
+                    Text(text = "EJEMPLO", color = Color.White)
+                    Text(text = "EJEMPLO", color = Color.White)
+                    Text(text = "EJEMPLO", color = Color.White)
+                    Text(text = "EJEMPLO", color = Color.White)
+                    Text(text = "EJEMPLO", color = Color.White)
+                    Text(text = "EJEMPLO", color = Color.White)
+                }
             }
         }
     }

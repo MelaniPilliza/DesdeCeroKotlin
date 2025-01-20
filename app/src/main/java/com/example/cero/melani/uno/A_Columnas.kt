@@ -26,14 +26,14 @@ class A_Columnas : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            app()
+            App()
         }
     }
 }
 
 @Preview
 @Composable
-fun app(){
+fun App(){
     Column(modifier = Modifier.fillMaxSize().background(Color.Magenta)) {
         Image(
             painter = painterResource(id=R.drawable.mariposa),
